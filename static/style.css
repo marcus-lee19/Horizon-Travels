@@ -1,0 +1,1072 @@
+body{
+    font-family:'Poppins', sans-serif;
+    background-image : url("Airplane2.webp");
+    min-height: 100vh;
+    background-size : cover;
+    margin : 0;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    
+    top : 0;
+    display:flex;
+    align-items:center;
+    background-color:#1d91cc;
+    max-height:45px;
+    margin:auto;
+    justify-content:space-between;
+}
+
+.sidebar{
+    position : fixed;
+    top : 0;
+    right : 0;
+    padding-left: 0;
+    height : 100%;
+    width : 250px;
+    z-index : 999;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    margin-top : 0;
+    background-color: rgba(29, 145, 204, 0.2);
+    backdrop-filter: blur(10px);
+}
+.toggle-off{
+    margin-right: auto;
+}
+.toggle-off a:hover{
+    background: none !important;
+}
+.sidebar li{
+    width : 100%;
+}
+.sidebar a{
+    width : 100%;
+}
+.sidebar a:hover{
+    background-color : #1d91cc;
+}
+.toggle-menu{
+    display : none;
+}
+
+h1{
+    color:white;
+    padding:20px;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    align-items:center;
+
+}
+
+li{
+    display:inline;
+    float:left;
+}
+
+a{
+    display:inline-block;
+    padding:10px;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li a:hover{
+    background-color:#105274;
+}
+
+.btn{
+    display:flex;
+    font-family:'Poppins', sans-serif;
+    background-color:white;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:1rem;
+    border-color : #0d47a1;
+    font-size: 1.2rem;
+    padding: 8px 8px;
+    margin: 20px;
+    margin-left:auto;
+}
+
+
+
+button:hover{
+    background-color:#0d47a1;
+    color : white;
+}
+h2{
+    text-align : center;
+    font-size : 40px;
+    color : white;
+}
+
+.title{
+    height: 600px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center; 
+}
+.title h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.title p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media(max-width : 1010px){
+    .hideMobile{
+        display: none;
+    }
+    .toggle-menu{
+        display : block;
+    }
+    .title {
+        height: 500px; 
+        padding: 30px;
+    }
+
+    .title h1 {
+        font-size: 40px; 
+    }
+
+    .title p {
+        font-size: 18px;
+    }
+}
+@media(max-width : 500px){
+    .sidebar{
+        width : 100%;
+    }
+    .title {
+        height: 400px;
+        padding: 10px;
+    }
+
+    .title h1,h2 {
+        font-size: 30px; 
+    }
+
+    .title p {
+        font-size: 16px; 
+    }
+}
+
+
+.thanks{
+    color:white;
+    font-size: 20px;
+    text-align : center;
+}
+
+.body-btn{
+    display:flex;
+    font-family:'Poppins', sans-serif;
+    background-color:white;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:1rem;
+    border-color : #0d47a1;
+    font-size: 1.2rem;
+    padding: 8px 8px;
+    margin: 30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.body-btn-dark{
+    display:flex;
+    font-family:'Poppins', sans-serif;
+    background-color:#1d91cc;
+    color : white;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:1rem;
+    border-color : #0d47a1;
+    font-size: 1.2rem;
+    padding: 8px 8px;
+    margin: 30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.body-btn:hover{
+    background-color:#0d47a1;
+    color : white;
+}
+
+.popular-destinations {
+    padding: 40px 20px;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.popular-destinations h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.destination-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destination {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    text-align: left;
+}
+
+.destination img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination h3 {
+    font-size: 24px;
+    margin: 10px;
+    color: #1d91cc;
+}
+
+.destination p {
+    font-size: 16px;
+    color: black;
+    margin: 10px;
+}
+
+.destination-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.destination-container a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.reviews {
+    padding: 40px 20px;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.review p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.review h4 {
+    font-size: 20px;
+    color: #1d91cc;
+    text-align: right;
+}
+
+table{
+    margin-left : auto;
+    margin-right : auto;
+    text-align : left;
+    font-size : 20px;
+    margin-bottom : 50px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th{
+    background-color : #1d91cc;
+    color : white;
+    padding : 12px 15px;
+}
+
+tr{
+    color : black;
+    border-bottom : 1px solid black;
+    background-color : white;
+}
+
+td{
+    padding : 12px 15px;
+}
+th:first-child {
+    border-top-left-radius: 20px;
+  }
+  
+  th:last-child {
+    border-top-right-radius: 20px;
+  }
+  
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+  }
+  
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+  }
+  @media (max-width: 600px) {
+    table {
+      width: 100%;
+      font-size: 16px;
+    }
+    
+    thead{
+        display : none !important;
+    }
+
+    th, td {
+      padding: 8px 10px;
+    }
+  
+    th, td {
+      display: table-cell;
+      width: auto;
+    }
+  
+    tr {
+      display: table-row;
+    }
+  
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    tr {
+      margin-bottom: 10px;
+    }
+  
+    td {
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+.wrapper{
+    justify-content : center;
+    width : 100%;
+    max-width: 400px;
+    display : flex;
+    margin : 100px auto;
+    margin-bottom: 50px;
+}
+
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    justify-content : center;
+    width : 70%;
+    display : flex;
+    flex-direction: column;
+    margin-top : 100px;
+    margin-left : auto;
+    margin-right : auto;
+    padding : 20px;
+}
+
+.wrapper .input-box{
+    position : relative;
+    width : 100%;
+    height : 50px;
+    margin-bottom : 20px;
+}
+
+.input-box input{
+    width : 100%;
+    height : 100%;
+    border : black;
+    border-radius : 20px;
+    font-size : 16px;
+    font-family:'Poppins', sans-serif;
+    padding-left : 20px;
+    box-sizing: border-box;
+}
+
+.details{
+    color :white;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.error{
+    position: relative;
+    color: red; 
+    font-size : 14px;
+    margin : 5px 0;
+    text-align: center; 
+    font-weight: bold;
+}
+
+.success{
+    position: relative;
+    color: lightgreen; 
+    font-size : 14px;
+    margin : 5px 0;
+    text-align: center; 
+    font-weight: bold;
+}
+
+.reg-details{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap : 15px;
+}
+.reg-details p, .register-link p{
+    color : white;
+}
+
+.register-link a:hover{
+    text-decoration : underline;
+}
+
+.reg-input-box{
+    width: 45%;
+    margin-bottom: 15px;
+}
+
+
+.reg-details .reg-input-box input{
+    width : 100%;
+    height : 50px;
+    border : black;
+    border-radius : 20px;
+    font-size : 16px;
+    font-family:'Poppins', sans-serif;
+    padding-left : 30px;
+}
+
+.input-box i{
+    position : absolute;
+    right : 10px;
+    top : 30%;
+}
+.input-box input::placeholder{
+    font-family:'Poppins', sans-serif;
+}
+
+.reg-input-box input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.reg-input-box label {
+    font-size: 16px;
+    color: white;
+}
+
+.reg-input-box label a {
+    color: white;
+    text-decoration: none;
+}
+
+.reg-input-box label a:hover {
+    text-decoration: underline;
+}
+
+.login, .register{
+    display:block;
+    font-family:'Poppins', sans-serif;
+    background-color:#0d47a1;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:2rem;
+    font-size: 1.2rem;
+    color:white;
+    padding: 16px 16px;
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 10px;
+}
+
+.register{
+    width : 100%;
+    margin-left : 30px;
+    border-radius: 1rem;
+}
+
+.login:hover, .register:hover{
+    background-color: #001f3f;
+}
+
+.register-link{
+    text-align : center;
+}
+
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.terms-container ol {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+@media (max-width: 790px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .reg-input-box {
+        width: 100%; 
+    }
+
+    .register {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 85%; 
+        padding: 10px;
+    }
+
+    .reg-input-box input {
+        font-size: 14px; 
+        height: 45px;
+        padding-left: 15px;
+    }
+
+    .details {
+        font-size: 14px; 
+    }
+
+    .register {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .register-link {
+        font-size: 12px;
+    }
+}
+
+footer{
+    background-color: gray;
+    text-align: center; 
+    padding : 15px;
+    font-size: 14px;
+    color: white;
+}
+
+
+.wrapper .input-box select,
+.wrapper .input-box input[type="date"],
+.wrapper .input-box input[type="number"],
+.wrapper .dropdown {
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    box-sizing: border-box; 
+}
+
+.user-info-container {
+    width: 100%;
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-info-card {
+    text-align: center;
+}
+
+.user-info-card h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.info-item .label {
+    font-weight: 600;
+    color: black;
+}
+
+.info-item .value {
+    font-weight: 400;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .user-info-container {
+        width: 90%; 
+    }
+
+}
+
+.change-password-link{
+    color : black;
+    margin-top : 20px;
+}
+
+.change-password-link:hover{
+    text-decoration : underline;
+}
+
+.change-password-card .input-box {
+    width: 100%;
+    margin-top : 20px;
+}
+
+.change-password-card .body-btn{
+    margin-top : 40px;
+}
+
+.page-header {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-top : 50px;
+    margin-bottom : -40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: none;
+    background-color: white;
+}
+
+.detail-item .value {
+    font-weight: 400;
+    color: #333;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.result-card {
+    width: 320px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 0;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+
+
+.result-item .label {
+    font-weight: bold;
+}
+
+.result-item .value ,.result-item .label{
+    font-size: 16px;
+}
+
+.result-item .price {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.no-results{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+    margin-top: 200px;
+    margin-bottom : 150px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.results-container p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.result-price {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.result-price h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.hidden-submit {
+    display: none; 
+}
+
+.flight-selection-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form group styling */
+.flight-selection-form .form-group {
+    margin-bottom: 20px;
+}
+
+.flight-selection-form label {
+    display: block;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.flight-selection-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+
+/* Flight details styling */
+.flight-details {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.flight-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.flight-details p {
+    font-size: 16px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    color: white;
+}
+
+@media (min-width: 768px){
+    .result-card{
+        width : 500px;
+    }
+}
+
+.tickets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+.ticket-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+.ticket-header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.ticket-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.ticket-route .departure,
+.ticket-route .arrival {
+    flex: 1;
+}
+
+.ticket-route h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.ticket-card p {
+    margin: 5px 0;
+}
+
+.ticket-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.ticket-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .ticket-card {
+        width: 100%;
+    }
+
+    .tickets-container {
+        padding: 10px;
+    }
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 32px; 
+    margin: 16px;
+}
+
+.table-wrapper {
+    flex: 1;
+}
+
+
+@media (min-width: 1024px) {
+    .table-container {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .table-wrapper {
+        width: 48%; 
+    }
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #1d91cc; 
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #0d47a1; 
+}
+
+.btn-delete {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #a71d2a; 
+}
+
+.status-container {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.status-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .status-container {
+        padding: 15px;
+    }
+
+    .status-container table {
+        font-size: 14px;
+    }
+
+    .status-container th, .status-container td {
+        padding: 10px;
+        padding-left: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .status-container {
+        padding: 10px;
+    }
+
+    .status-container table {
+        font-size: 12px;
+    }
+
+    .status-container th, .status-container td {
+        padding: 8px;
+    }
+
+    .status-container table, .status-container thead, .status-container tbody, .status-container th, .status-container td, .status-container tr {
+        display: block;
+    }
+
+    .status-container tr {
+        margin-bottom: 10px;
+    }
+
+    .status-container td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .status-container td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .status-container th {
+        display: none;
+    }
+}
+
+/* 
+Student ID : 24017967
+Student Name : Marcus Lee
+Student Email : kun2.lee@live.uwe.ac.uk
+*/

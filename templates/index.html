@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Horizon Travels</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src = "../static/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+    <div class="nav-logo"><h1>Horizon Travels</h1></div>
+    <ul class = "sidebar">
+        <div class = "toggle-off" onclick = hideSidebar()><a href="#"><i class="fa fa-close"></i></a></div>
+        <li><a href="/" name="home"><i class="fa fa-house"></i> Home</a></li>
+        <li><a href="/flight-times" name="flight-times"><i class="fa fa-clock"></i> Flight Times</a></li>
+        <li><a href="/bookings" name="bookings"><i class="fa fa-ticket"></i> Bookings</a></li>
+        {% if session['logged_in'] %}
+        <li><a href="/userinfo" name="userinfo"><i class="fa fa-user"></i> User Info</a></li>
+        <li><a href="/tickets" name="tickets"><i class="fa fa-ticket"></i> Tickets</a></li>
+        {% endif %}
+    </ul>
+    <ul class="nav-links">
+        <li class = "hideMobile"><a href="/" name="home"><i class="fa fa-house"></i> Home</a></li>
+        <li class = "hideMobile"><a href="/flight-times" name="flight-times"><i class="fa fa-clock"></i> Flight Times</a></li>
+        <li class = "hideMobile"><a href="/bookings" name="bookings"><i class="fa fa-ticket"></i> Bookings</a></li>
+        {% if session['logged_in'] %}
+        <li class = "hideMobile"><a href="/userinfo" name="userinfo"><i class="fa fa-user"></i> User Info</a></li>
+        <li class = "hideMobile"><a href="/tickets" name="tickets"><i class="fa fa-ticket"></i> Tickets</a></li>
+        {% endif %}
+    </ul>
+    {% if session['logged_in'] %}
+    <button class="btn" onclick="window.location.href = '/logout';">Logout</button>
+    {% else %}
+    <button class="btn" onclick="window.location.href = '/login';">Login</button>
+    {% endif %}
+    <li class = "toggle-menu" onclick = showSidebar()><a href="#"><i class="fa fa-bars"></i></a></li>
+</nav>
+<div class="title">
+    <div>
+        {% if name %}
+            <h2>Welcome {{ name }}</h2>
+        {% else %}
+            <h2>Welcome to Horizon Travels</h2>
+        {% endif %}
+
+        <h1>Explore the World with Horizon Travels</h1>
+        <p>Your journey begins here. Book flights, explore destinations, and more.</p>
+        <button class = "body-btn" onclick="window.location.href='/bookings';">Book Now</button>
+    </div>
+</div>
+<div class="popular-destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination-container">
+        <a href="/bookings?arrival=Bristol" class="destination">
+            <img src="../static/Bristol.jpg" alt="Bristol">
+            <h3>Bristol</h3>
+            <p>A vibrant city known for its rich maritime history and creative culture.</p>
+        </a>
+        <a href="/bookings?arrival=London" class="destination">
+            <img src="../static/London.jpg" alt="London">
+            <h3>London</h3>
+            <p>The bustling capital of England, offering iconic landmarks and diverse experiences.</p>
+        </a>
+        <a href="/bookings?arrival=Cardiff" class="destination">
+            <img src="../static/Cardiff.jpg" alt="Cardiff">
+            <h3>Cardiff</h3>
+            <p>A vibrant city known for its historic castles, cultural festivals, and thriving waterfront.</p>
+        </a>
+    </div>
+</div>
+<section class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review-container">
+        <div class="review">
+            <p>"Horizon Travels made my trip so easy and enjoyable! The booking process was seamless, and the customer service was excellent."</p>
+            <h4>- Jane Doe</h4>
+        </div>
+        <div class="review">
+            <p>"I had an amazing experience with Horizon Travels. Their attention to detail and support made my vacation unforgettable."</p>
+            <h4>- John Smith</h4>
+        </div>
+        <div class="review">
+            <p>"Highly recommend Horizon Travels! They offer great deals and their team is very professional and helpful."</p>
+            <h4>- Emily Davis</h4>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>&copy; 2025 Horizon Travels. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+<!-- 
+Student ID : 24017967
+Student Name : Marcus Lee
+Student Email : kun2.lee@live.uwe.ac.uk
+ -->

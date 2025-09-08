@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Horizon Travels</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src = "../static/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo"><h1>Horizon Travels</h1></div>
+        <ul class = "sidebar">
+            <div class = "toggle-off" onclick = hideSidebar()><a href="#"><i class="fa fa-close"></i></a></div>
+            <li><a href="/" name="home"><i class="fa fa-house"></i> Home</a></li>
+            <li><a href="/flight-times" name="flight-times"><i class="fa fa-clock"></i> Flight Times</a></li>
+            <li><a href="/bookings" name="bookings"><i class="fa fa-ticket"></i> Bookings</a></li>
+            {% if session['logged_in'] %}
+            <li><a href="/userinfo" name="userinfo"><i class="fa fa-user"></i> User Info</a></li>
+            {% endif %}
+            {% if session['logged_in'] %}
+            <li><a href="/tickets" name="tickets"><i class="fa fa-ticket"></i> Tickets</a></li>
+            {% endif %}
+        </ul>
+        <ul class="nav-links">
+            <li class = "hideMobile"><a href="/" name="home"><i class="fa fa-house"></i> Home</a></li>
+            <li class = "hideMobile"><a href="/flight-times" name="flight-times"><i class="fa fa-clock"></i> Flight Times</a></li>
+            <li class = "hideMobile"><a href="/bookings" name="bookings"><i class="fa fa-ticket"></i> Bookings</a></li>
+            {% if session['logged_in'] %}
+            <li class = "hideMobile"><a href="/userinfo" name="userinfo"><i class="fa fa-user"></i> User Info</a></li>
+            {% endif %}
+            {% if session['logged_in'] %}
+            <li class = "hideMobile"><a href="/tickets" name="tickets"><i class="fa fa-ticket"></i> Tickets</a></li>
+            {% endif %}
+        </ul>
+            {% if session['logged_in'] %}
+            <button class="btn" onclick="window.location.href = '/logout';">Logout</button>
+            {% else %}
+            <button class="btn" onclick="window.location.href = '/login';">Login</button>
+            {% endif %}
+    </nav>
+    <div>
+        <h2>Password changed successfully!</h2>
+        <br>
+        <button class="body-btn" onclick="window.location.href = '/';">Main Page</button>
+    </div>
+</body>
+</html>
+
+<!-- 
+Student ID : 24017967
+Student Name : Marcus Lee
+Student Email : kun2.lee@live.uwe.ac.uk
+ -->
